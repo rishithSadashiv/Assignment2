@@ -35,12 +35,13 @@ namespace Assignment2.Controllers
         // POST: CustomerController1/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Customer c)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
+                    _repo.Add(c);
                     return RedirectToAction(nameof(Index));
                 }
                 else

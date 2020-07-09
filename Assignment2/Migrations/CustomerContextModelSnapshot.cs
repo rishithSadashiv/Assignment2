@@ -30,6 +30,7 @@ namespace Assignment2.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Cname")
+                        .IsRequired()
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
@@ -37,8 +38,8 @@ namespace Assignment2.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("MobileNo")
-                        .HasColumnType("int");
+                    b.Property<long>("MobileNo")
+                        .HasColumnType("bigint");
 
                     b.HasKey("Cid");
 

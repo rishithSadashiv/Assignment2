@@ -12,12 +12,13 @@ namespace Assignment2.Entities
     {
         [Key]
         public int Cid{ get; set; }
+        [Required]
         [StringLength(50)]
         public string Cname { get; set; }
         [Required]
         public string EmailId{ get; set; }
         [Required]
-        public int MobileNo { get; set; }
+        public long MobileNo { get; set; }
         [Required]
         public string City { get; set; }
 
